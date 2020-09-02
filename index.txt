@@ -1,0 +1,38 @@
+          _         _                                    _           
+         |:|       (_)                                  | |          
+   ___ __|:|_ __    _ _ __ ___  _ __ ___    ___ ___   __| | ___  ___ 
+  /:__/:_`:|:'_:\  |:|:'_ `:_:\|:'_:`:_:\  / __/ _ \ / _` |/ _ \/ __|
+ |:(_|:(_|:|:| |:|_|:|:| |:| |:|:| |:| | || (_| (_) | (_| |  __/\__ \
+  \___\__,_|_| |_(_)_|_| |_| |_|_| |_| |_(_)___\___/ \__,_|\___||___/
+
+
+
+
+CDN of informathemusic
+
+LICENSING
+=========
+
+Before downloading a file, check its licensing.
+Consider this pseudo-code:
+
+[start]
+If(files_in_directory contains "LICENSE") Do
+	license=read_file("LICENSE")
+	exit(license)
+Else If(directory_is_a_subdirectory) Do
+	go_back_to_parent_directory()
+	goto(start)
+Else
+	exit("No license yet, i have to look it up by myself")
+
+
+
+
+
+
+
+(now what?)
+(now we wait till he leaves)
+(will he)
+(maybe, maybe not)
