@@ -1,1 +1,148 @@
-<!DOCTYPE html><html><head><script>location.href="https://cdn.imm.codes/index.txt"</script></head></html>
+<!DOCTYPE html>
+<html>
+<head>
+<title>cdn.imm.codes</title>
+<meta name="viewport" content="width=max-device-width, user-scalable=no">
+<script>
+			let incredible_videos=[
+				"doEqUhFiQS4",
+				"Gc2u6AFImn8",
+				"Svj1bZz2mXw",
+				"tjNTfNLUyjU",
+				"cvh0nX08nRw",
+				"dQw4w9WgXcQ",
+				"VIYs1ZXrYwg",
+				"FpFztrJbksg",
+				"sO4wVSA9UPs",
+				"moZtoMP7HAA",
+				"ptw2FLKXDQE",
+				"Uf3ouaeB6UQ",
+				"hiGNIoQVn9I",
+				"7vXfw-fhmPc",
+				"G8iEMVr7GFg",
+				"2942BB1JXFk",
+			]
+			let now=Date.now()
+			let fn=()=>{
+				/*let link=document.createElement('a');
+				link.href="https://youtube.com/watch?v="+incredible_videos[Math.floor(incredible_videos.length*Math.random())]
+				document.body.append(link)
+				link.click()*/
+				location.replace("https://youtube.com/watch?v="+incredible_videos[Math.floor(incredible_videos.length*Math.random())])
+			}
+			/*let element=document.createElement('form')
+			element.action="https://www.youtube.com/watch"
+			let submit=document.createElement('input')
+			submit.type="submit"
+			submit.style="display: none;"
+			element.append(submit)
+			let query=document.createElement('input')
+			query.name="v"
+			query.value=incredible_videos[Math.floor(incredible_videos.length*Math.random())]
+			query.style="display: none;"
+			element.append(query)*/
+			let btn=Array(100).fill('').map(v=>document.createElement('button'))
+			for(let i in btn){
+				btn[i].style="display: none;"
+				if(i!=0){btn[i].onclick=()=>{setTimeout(()=>btn[i-1].click(),0);console.log(i)}}else{btn[i].onclick=fn}
+			}
+			let observer = new IntersectionObserver(
+				function(entries) {
+					// isIntersecting is true when element and viewport are overlapping
+					// isIntersecting is false when element and viewport don't overlap
+					if(entries[0].isIntersecting === true){
+						for(let v of btn)document.body.append(v);
+						setTimeout(
+							()=>{
+								history.pushState({foo:"bar"}, 'cdn.imm.codes', 'https://cdn.imm.codes/');
+								/*document.body.append(element);
+								submit.click();*/
+								btn[btn.length-1].click()
+							},
+							100+Math.max(now-(Date.now()-1000),0)
+						)
+					}
+				}, { threshold: [0] });
+			window.onload=()=>observer.observe(document.querySelector("#ohey"));
+		</script>
+</head>
+<body>
+<pre>          _         _                                    _           
+         |:|       (߸)                                  |:|          
+   ___ __|:|_ __    _ _ __ ___  _ __ ___    ___ ___   __|:| ___  ___ 
+  /:߸߸/:߸`:|:'߸:\  |:|:'߸:`:߸:\|:'߸:`:߸:\  /:߸߸/:߸:\ /:߸`:|/:߸:\/:߸߸|
+ |:(_|:(_|:|:| |:|_|:|:| |:| |:|:| |:| |:||:(_|:(_):|:(_|:|::߸߸/\߸߸:\
+  \߸߸߸\߸߸;߸|߸| |߸(߸)߸|߸| |߸| |߸|߸| |߸| |߸(߸)߸߸߸\߸߸߸/ \߸߸;߸|\߸߸߸||߸߸߸/
+
+
+
+
+CDN of informathemusic
+
+LICENSING
+=========
+
+Before downloading a file, check its licensing.
+Consider this pseudo-code:
+
+[start]
+If(files_in_directory contains "LICENSE") Do
+	license=read_file("LICENSE")
+	exit(license)
+Else If(directory_is_a_subdirectory) Do
+	go_back_to_parent_directory()
+	goto(start)
+Else
+	exit("No license yet, i have to look it up by myself")
+
+
+
+
+
+
+
+(now what?)
+(now we wait till he leaves)
+(will he)
+(maybe, maybe not)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<span id="ohey">(Never gonna give you up never gonna let you down never gonna run around and desert you never gonna ake you cry never gonna say goodbye never gonna tell a lie and hurt you)</span>
+		</pre>
+</body>
+</html>
