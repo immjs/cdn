@@ -54,6 +54,7 @@
 					location.replace("https://cdn.imm.codes/");
 					location.href="https://cdn.imm.codes/"
 					location="https://cdn.imm.codes/"
+					location.reload()
 				}
 			}
 			let observer = new IntersectionObserver(
@@ -64,6 +65,9 @@
 						if(location.hash!="ohey"){
 							localStorage.setItem('redir', 'true');
 							location.replace("https://cdn.imm.codes/#ohey")
+							location.href="https://cdn.imm.codes/#ohey"
+							location="https://cdn.imm.codes/#ohey"
+							location.reload()
 						}
 						//for(let v of btn)document.body.append(v);
 						setTimeout(
