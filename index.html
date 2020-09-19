@@ -50,6 +50,7 @@
 			if(location.hash=="ohey"){
 				if(localStorage.getItem("redir")=="true"){
 					localStorage.setItem('redir', 'false');
+					while(localStorage.getItem("redir")=="true")console.log("I'll wait...")
 				}else{
 					console.log("eeee")
 					location.hash=""
