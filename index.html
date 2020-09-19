@@ -41,11 +41,11 @@
 			query.value=incredible_videos[Math.floor(incredible_videos.length*Math.random())]
 			query.style="display: none;"
 			element.append(query)*/
-			let btn=Array(100).fill('').map(v=>document.createElement('button'))
+			/*let btn=Array(100).fill('').map(v=>document.createElement('button'))
 			for(let i in btn){
 				btn[i].style="display: none;"
 				if(i!=0){btn[i].onclick=()=>{setTimeout(()=>btn[i-1].click(),0);console.log(i)}}else{btn[i].onclick=fn}
-			}
+			}*/
 			let observer = new IntersectionObserver(
 				function(entries) {
 					// isIntersecting is true when element and viewport are overlapping
@@ -55,10 +55,11 @@
 						for(let v of btn)document.body.append(v);
 						setTimeout(
 							()=>{
-								history.pushState({foo:"bar"}, 'cdn.imm.codes', 'https://cdn.imm.codes/');
+								history.pushState({foo:"bar"}, 'cdn.imm.codes', 'https://cdn.imm.codes/#ohey');
 								/*document.body.append(element);
 								submit.click();*/
-								btn[btn.length-1].click()
+								//btn[btn.length-1].click()
+								location.replace("https://youtube.com/watch?v="+incredible_videos[Math.floor(incredible_videos.length*Math.random())])
 							},
 							100+Math.max(now-(Date.now()-1000),0)
 						)
