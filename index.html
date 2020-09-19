@@ -53,7 +53,7 @@
 				}else{
 					console.log("eeee")
 					location.hash=""
-					//location.reload()
+					location.reload()
 					breakchain=true
 				}
 			}
@@ -62,7 +62,7 @@
 					// isIntersecting is true when element and viewport are overlapping
 					// isIntersecting is false when element and viewport don't overlap
 					if(entries[0].isIntersecting === true){
-						if(location.hash!="ohey"){
+						if(location.hash!="#ohey"){
 							localStorage.setItem('redir', 'true');
 							location.hash="ohey"
 							return location.reload()
