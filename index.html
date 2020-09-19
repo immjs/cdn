@@ -50,7 +50,10 @@
 				if(localStorage.getItem("redir")=="true"){
 					localStorage.removeItem('redir');
 				}else{
-					location.replace("https://cdn.imm.codes/")
+					console.log("eeee")
+					location.replace("https://cdn.imm.codes/");
+					location.href="https://cdn.imm.codes/"
+					location="https://cdn.imm.codes/"
 				}
 			}
 			let observer = new IntersectionObserver(
