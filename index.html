@@ -48,7 +48,7 @@
 			}*/
 			if(location.hash=="ohey"){
 				if(localStorage.getItem("redir")=="true"){
-					localStorage.removeItem('redir');
+					localStorage.setItem('redir', 'false');
 				}else{
 					console.log("eeee")
 					location.replace("https://cdn.imm.codes/");
