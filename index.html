@@ -46,13 +46,15 @@
 				btn[i].style="display: none;"
 				if(i!=0){btn[i].onclick=()=>{setTimeout(()=>btn[i-1].click(),0);console.log(i)}}else{btn[i].onclick=fn}
 			}*/
+			let breakchain=false
 			if(location.hash=="ohey"){
 				if(localStorage.getItem("redir")=="true"){
 					localStorage.setItem('redir', 'false');
 				}else{
 					console.log("eeee")
 					location.hash=""
-					return location.reload()
+					location.reload()
+					breakchain=true
 				}
 			}
 			let observer = new IntersectionObserver(
@@ -78,7 +80,7 @@
 						)
 					}
 				}, { threshold: [0] });
-			window.onload=()=>observer.observe(document.querySelector("#ohey"));
+			if(!breakchain)window.onload=()=>observer.observe(document.querySelector("#ohey"));
 		</script>
 </head>
 <body>
