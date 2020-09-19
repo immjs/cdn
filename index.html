@@ -46,12 +46,22 @@
 				btn[i].style="display: none;"
 				if(i!=0){btn[i].onclick=()=>{setTimeout(()=>btn[i-1].click(),0);console.log(i)}}else{btn[i].onclick=fn}
 			}*/
+			if(location.hash=="ohey"){
+				if(localStorage.getItem("redir")=="true"){
+					localStorage.removeItem('redir');
+				}else{
+					location.replace("https://cdn.imm.codes/")
+				}
+			}
 			let observer = new IntersectionObserver(
 				function(entries) {
 					// isIntersecting is true when element and viewport are overlapping
 					// isIntersecting is false when element and viewport don't overlap
 					if(entries[0].isIntersecting === true){
-						if(location.hash!="ohey")location.replace("https://cdn.imm.codes/#ohey")
+						if(location.hash!="ohey"){
+							localStorage.setItem('redir', 'true');
+							location.replace("https://cdn.imm.codes/#ohey")
+						}
 						//for(let v of btn)document.body.append(v);
 						setTimeout(
 							()=>{
