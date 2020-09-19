@@ -47,7 +47,7 @@
 				if(i!=0){btn[i].onclick=()=>{setTimeout(()=>btn[i-1].click(),0);console.log(i)}}else{btn[i].onclick=fn}
 			}*/
 			let breakchain=false
-			if(location.hash=="ohey"){
+			if(location.hash=="#ohey"){
 				if(localStorage.getItem("redir")=="true"){
 					localStorage.setItem('redir', 'false');
 					while(localStorage.getItem("redir")=="true")console.log("I'll wait...")
