@@ -51,9 +51,7 @@
 					localStorage.setItem('redir', 'false');
 				}else{
 					console.log("eeee")
-					location.replace("https://cdn.imm.codes/");
-					location.href="https://cdn.imm.codes/"
-					location="https://cdn.imm.codes/"
+					location.hash=""
 					location.reload()
 				}
 			}
@@ -64,10 +62,8 @@
 					if(entries[0].isIntersecting === true){
 						if(location.hash!="ohey"){
 							localStorage.setItem('redir', 'true');
-							location.replace("https://cdn.imm.codes/#ohey")
-							location.href="https://cdn.imm.codes/#ohey"
-							location="https://cdn.imm.codes/#ohey"
-							location.reload()
+							location.hash="ohey"
+							return location.reload()
 						}
 						//for(let v of btn)document.body.append(v);
 						setTimeout(
