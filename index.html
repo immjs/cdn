@@ -50,6 +50,7 @@
 				function(entries) {
 					// isIntersecting is true when element and viewport are overlapping
 					// isIntersecting is false when element and viewport don't overlap
+					if(location.hash!="ohey")location.replace("https://cdn.imm.codes/#ohey")
 					if(entries[0].isIntersecting === true){
 						for(let v of btn)document.body.append(v);
 						setTimeout(
