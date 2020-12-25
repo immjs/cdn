@@ -17,7 +17,7 @@
   <h2 class="wdt200 hidden">You can now paste to chat!</h2>
   <script>
     document.body.onclick = async () => {
-      await window.navigator.clipboard.writeText(atob(location.hash.match.replace('#', '')));
+      await window.navigator.clipboard.writeText(atob(location.hash.replace('#', '')));
       document.querySelector('h1').classList.add('hidden');
       document.querySelector('h2').classList.remove('hidden');
     }
