@@ -4,10 +4,6 @@
   <meta charset="UTF-8" />
   <title>Copying to clipboard...</title>
   <style>
-    .center {
-      top: calc(50vw - 50%);
-      left: calc(50vh - 50%);
-    }
     .hidden {
       display: none;
     }
@@ -21,7 +17,7 @@
   <h2 class="wdt200 hidden">You can now paste to chat!</h2>
   <script>
     document.body.onclick = async () => {
-      await navigator.clipboard.writeText(btoa(location.hash));
+      await window.navigator.clipboard.writeText(btoa(location.hash));
       document.querySelector('h1').classList.add('hidden');
       document.querySelector('h2').classList.remove('hidden');
     }
