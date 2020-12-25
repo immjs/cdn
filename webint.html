@@ -5,7 +5,6 @@
   <title>Copying to clipboard...</title>
   <style>
     .center {
-      position: absolute;
       top: calc(50vw - 50%);
       left: calc(50vh - 50%);
     }
@@ -18,10 +17,8 @@
   </style>
 </head>
 <body>
-  <div class="center">
-    <h1>Click to copy...</h1>
-    <h2 class="wdt200 hidden">You can now paste to chat!</h2>
-  </div>
+  <h1>Click to copy...</h1>
+  <h2 class="wdt200 hidden">You can now paste to chat!</h2>
   <script>
     document.body.onclick = async () => {
       await navigator.clipboard.writeText(btoa(location.hash));
