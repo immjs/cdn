@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Copying to clipboard...</title>
+  <style>
+    .center {
+      transform: translate(calc(50vw - 50%), calc(50vw - 50%));
+    }
+    .hidden {
+      display: none;
+    }
+    .wdt200 {
+      width: 200;
+    }
+  </style>
+</head>
+<body>
+  <div class="center">
+    <h1>Click to copy...</h1>
+    <h2 class="wdt200 hidden">You can now paste to chat!</h2>
+  </div>
+  <script>
+    document.body.onclick = async () => {
+      await navigator.clipboard.writeText(btoa(location.hash));
+      document.querySelector('h1').classList.add('hidden');
+      document.querySelector('h2').classList.remove('hidden');
+    }
+  </script>
+</body>
+</html>
