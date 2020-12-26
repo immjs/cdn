@@ -4,10 +4,15 @@
   <meta charset="UTF-8" />
   <title>Copying to clipboard...</title>
   <link href="https://ez-css.now.sh/" rel="stylesheet"/>
+  <style>
+    .hidden {
+      display: none;
+    }
+  </style>
 </head>
 <body>
   <h1>Click to copy...</h1>
-  <h2 class="wdt200 hidden">You can now paste to chat!</h2>
+  <h2 class="hidden">You can now paste to chat!</h2>
   <script>
     document.body.onclick = async () => {
       await window.navigator.clipboard.writeText(atob(location.hash.replace('#', '')));
