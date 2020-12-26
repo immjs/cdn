@@ -8,9 +8,18 @@
     .hidden {
       display: none;
     }
+    #handle_click {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      background-image: url(./data/background.png);
+      background-repeat: repeat;
+    }
   </style>
 </head>
 <body>
+  <div id="handle_click"></div>
   <h1>Click to copy...</h1>
   <h2 class="hidden">You can now paste to chat!</h2>
   <script>
